@@ -4,5 +4,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="lightyellow">#fcf4a3</color>
+    <color name="cream">#fffdd0</color>
+    <color name="coffee">#6f4e37</color>
+
+
 
 </resources>
