@@ -43,11 +43,12 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>) :
         Glide.with(holder.imgProduct.context).load(storageRef).into(holder.imgProduct)
 
         holder.cardView.setOnClickListener { view ->
-            val myIntent = Intent(
+            val intent = Intent(
                 view.context,
                 DetailActivity::class.java
             )
-            view.context.startActivity(myIntent)
+            intent.putExtra("productDetails", model)
+            view.context.startActivity(intent)
         }
     }
 }
