@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -13,16 +13,16 @@
         android:layout_marginBottom="6dp"
         android:outlineSpotShadowColor="@color/coffee"
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        >
+        app:cardElevation="10dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/text_stroke"
-            android:padding="10dp"
-            >
+            android:padding="10dp">
+
             <ImageView
-                android:id="@+id/imgPdt"
+                android:id="@+id/imgProduct"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
@@ -30,74 +30,73 @@
                 android:src="@drawable/ic_launcher_background"
 
                 />
+
             <TextView
-                android:id="@+id/namePdt"
+                android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imgProduct"
                 android:text="Product Name"
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imgPdt"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/soldby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:layout_toRightOf="@id/imgProduct"
                 android:text="Sold By: "
-                android:textSize="12dp"
                 android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/imgPdt"
-                android:layout_below="@id/namePdt"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/manuPdt"
-                android:layout_toRightOf="@id/soldby"
-                android:textColor="@color/black"
-                android:text="Manufacturer"
-                android:layout_below="@id/namePdt"
-                android:textSize="12dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dollar"
-                android:layout_below="@id/manuPdt"
-                android:layout_toRightOf="@id/imgPdt"
-                android:textColor="@color/black"
-                android:text="$"
-                android:layout_marginTop="2dp"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pricePdt"
-                android:layout_below="@id/manuPdt"
-                android:layout_toRightOf="@id/dollar"
-                android:textColor="@color/black"
-                android:layout_marginTop="2dp"
-                android:text="00.00"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:layout_marginLeft="3dp"
-                />
-            <TextView
-                android:id="@+id/descPdt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:layout_below="@id/dollar"
-                android:layout_toRightOf="@id/imgPdt"
-                android:layout_marginTop="2dp"
-                android:textColor="@color/black"
-                android:textSize="12dp"
-                />
+                android:textSize="12dp" />
 
+            <TextView
+                android:id="@+id/manuPdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:layout_toRightOf="@id/soldby"
+                android:text="Manufacturer"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtDollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/manuPdt"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/imgProduct"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/manuPdt"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/txtDollar"
+                android:text="00.00"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDollar"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/imgProduct"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
 
 
         </RelativeLayout>
