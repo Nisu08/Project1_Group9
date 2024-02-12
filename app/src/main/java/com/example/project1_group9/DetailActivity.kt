@@ -1,39 +1,24 @@
 package com.example.project1_group9
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
-class ProductActivity : AppCompatActivity() {
-
-    private var adapter: ProductAdapter?=null
+class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_product)
+        setContentView(R.layout.activity_detail)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val query = FirebaseDatabase.getInstance().reference.child("products")
-        val options = FirebaseRecyclerOptions.Builder<Product>().setQuery(query, Product::class.java).build()
-        adapter = ProductAdapter(options)
-        val rView : RecyclerView = findViewById(R.id.recView)
-        rView.layoutManager = LinearLayoutManager(this)
-        rView.adapter = adapter
     }
-    override fun onStart() {
-        super.onStart()
-        adapter?.startListening()
-    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_navigation, menu)
         return true
@@ -55,5 +40,4 @@ class ProductActivity : AppCompatActivity() {
         }
         return true
     }
-
 }

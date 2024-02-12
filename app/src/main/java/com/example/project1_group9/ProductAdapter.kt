@@ -1,10 +1,12 @@
 package com.example.project1_group9
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.firebase.ui.database.FirebaseRecyclerAdapter
@@ -22,6 +24,8 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>):
         val manuPdt: TextView = itemView.findViewById(R.id.manuPdt)
         val pricePdt: TextView = itemView.findViewById(R.id.pricePdt)
         val descPdt: TextView = itemView.findViewById(R.id.descPdt)
+        val cardView :CardView= itemView.findViewById(R.id.cardView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -44,6 +48,17 @@ class ProductAdapter(options: FirebaseRecyclerOptions<Product>):
 
         val StorageRef: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.url)
         Glide.with(holder.imgPdt.context).load(StorageRef).into(holder.imgPdt)
+
+        holder.cardView.setOnClickListener{view->
+            val myIntent = Intent(
+                view.context,
+                DetailActivity::class.java
+            )
+            view.getContext().startActivity(myIntent);
+        };
+
+
+
 
     }
 
