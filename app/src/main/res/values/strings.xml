@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Project1_Group9</string>
     <string name="cont">Continue to App</string>
+    <string name="pdts">Products</string>
+
 
 </resources>
