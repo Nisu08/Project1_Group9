@@ -13,8 +13,8 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
-class ProductAdapter(options: FirebaseRecyclerOptions<product>):
-    FirebaseRecyclerAdapter<product, ProductAdapter.MyViewHolder>(options)
+class ProductAdapter(options: FirebaseRecyclerOptions<Product>):
+    FirebaseRecyclerAdapter<Product, ProductAdapter.MyViewHolder>(options)
 {
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup): RecyclerView.ViewHolder(inflater.inflate(R.layout.product_rowlayout,parent,false))
     {
@@ -30,7 +30,7 @@ class ProductAdapter(options: FirebaseRecyclerOptions<product>):
         return  MyViewHolder(inflater,parent)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: product) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Product) {
         val name = model.name
         val manu = model.manufacturer
         val price = model.price

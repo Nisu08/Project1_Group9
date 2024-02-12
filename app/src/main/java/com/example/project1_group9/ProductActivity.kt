@@ -17,7 +17,7 @@ class ProductActivity : AppCompatActivity() {
         Log.i("AAAAAAAAA","DOne")
 
         val query = FirebaseDatabase.getInstance().reference.child("plushie")
-        val options = FirebaseRecyclerOptions.Builder<product>().setQuery(query, product::class.java).build()
+        val options = FirebaseRecyclerOptions.Builder<Product>().setQuery(query, Product::class.java).build()
         adapter = ProductAdapter(options)
         val rView : RecyclerView = findViewById(R.id.recView)
         rView.layoutManager = LinearLayoutManager(this)
