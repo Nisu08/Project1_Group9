@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         val txt1 = findViewById<TextView>(R.id.txt1)
         val imgbtn = findViewById<ImageButton>(R.id.imgbtn)
 
-        imgbtn.setOnClickListener {
+        imgbtn.setOnClickListener {view ->
             startActivity(Intent(this@MainActivity, ProductActivity::class.java))
         }
-        txt1.setOnClickListener{
+        txt1.setOnClickListener{view->
             startActivity(Intent(this@MainActivity, ProductActivity::class.java))
         }
     }
