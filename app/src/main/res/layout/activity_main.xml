@@ -27,7 +27,7 @@
         android:layout_marginBottom="55dp"
         android:textColor="@color/coffee"
         android:text="@string/cont"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
