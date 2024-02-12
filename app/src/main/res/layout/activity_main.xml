@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/plushlogo" />
 
     <TextView
-        android:id="@+id/txt1"
+        android:id="@+id/txtContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="74dp"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imgbtn"
+        android:id="@+id/imgBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:color/transparent"
@@ -45,7 +45,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toEndOf="@+id/txt1"
+        app:layout_constraintStart_toEndOf="@+id/txtContinue"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.00999999"
         app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />

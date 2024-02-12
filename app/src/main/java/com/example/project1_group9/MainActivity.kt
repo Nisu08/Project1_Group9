@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val txt1 = findViewById<TextView>(R.id.txt1)
-        val imgbtn = findViewById<ImageButton>(R.id.imgbtn)
+        val txtContinue: TextView = findViewById<TextView>(R.id.txtContinue)
+        val imgBtn: ImageButton = findViewById<ImageButton>(R.id.imgBtn)
 
-        imgbtn.setOnClickListener {view ->
+        imgBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, ProductActivity::class.java))
         }
-        txt1.setOnClickListener{view->
+        txtContinue.setOnClickListener {
             startActivity(Intent(this@MainActivity, ProductActivity::class.java))
         }
     }
