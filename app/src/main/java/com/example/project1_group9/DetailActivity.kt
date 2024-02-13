@@ -52,7 +52,7 @@ class DetailActivity : AppCompatActivity() {
         if (item.itemId == R.id.nav_logout) {
             Toast.makeText(this, "User Logged Out", Toast.LENGTH_LONG).show()
             FirebaseAuth.getInstance().signOut()
-            val homeIntent = Intent(this, ProductActivity::class.java)
+            val homeIntent = Intent(this, SignInActivity::class.java)
             startActivity(homeIntent)
             finish()
         } else if (item.itemId == R.id.nav_home) {
